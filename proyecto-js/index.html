@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto JS</title>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Styles Css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <!-- <link id="" rel="stylesheet" type="text/css" href="css/red.css" />
+    <link id="" rel="stylesheet" type="text/css" href="css/blue.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/red.css" /> -->
+    <!-- Mis JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/proyecto.js"></script>
+    <!-- Moments js CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="">
+    <div class="" id="selector-theme">
+      <div class="" id="to-green" title="Tema Verde"></div>
+      <div class="" id="to-red" title="Tema Rojo"></div>
+      <div class="" id="to-blue" title="Tema Azul"></div>
+    </div>
+        <section id="global">
+          <!-- Cabezera -->
+          <header>
+            <div class="" id="logo"><h1>PROYECTO JS</h1></div>
+            <div class="toggle">
+              <input type="checkbox" name="boton" id="boton" title="Cambiar Tema">
+              <label for="boton" title="Cambiar Tema"></label>
+            </div>
+            <div class="clearfix"></div>
+            <nav id="menu">
+              <ul class="UL text-center">
+                <li class="LI"> <a class="A" href="index.html" title="Pagina Principal">INICIO</a> </li>
+                <li class="LI"> <a class="A" href="reloj.html" title="Reloj">RELOJ</a> </li>
+                <li class="LI"> <a class="A" href="about.html" title="Informacion">SOBRE MI</a> </li>
+                <li class="LI"> <a class="A" href="contact.html" title="Nuestros Contactos">CONTACTO</a> </li>
+              </ul>
+            </nav>
+          </header>
+          <!-- Slider -->
+          <div class="" id="slider">
+            <div class="bxslider">
+              <div><img src="img/hojas.jpg"></div>
+              <div><img src="img/rojo.jpg"></div>
+              <div><img src="img/cielo.jpg"></div>
+            </div>
+          </div>
+          <!-- Contenido -->
+          <section id="content">
+            <div class="" id="posts">
+              <!-- Post de Json -->
+            </div>
+            <aside class="sidebar" id="sidebar">
+              <div class="" id="about">
+                <h4 class="H4"><span class="SPAN">¿Quien Soy?</span></h4>
+                <img class="IMG" src="img/caracol.jpg" alt="Quien Soy">
+                <p class="P">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="login">
+                <h4 class="H4"><span class="SPAN">Identificate</span></h4>
+                <form class="FORM" action="#" method="post">
+                  <label for="name">Nombre:</label>
+                  <input class="INPUT" type="text" name="name" id="form_name" placeholder="Nombres">
+                  <label for="email">Email:</label>
+                  <input class="INPUT" type="email" name="email" id="form_email" placeholder="Correo Electronico">
+                  <label for="password">Password:</label>
+                  <input class="INPUT" type="password" name="password" placeholder="Contaseña" id="password">
+                  <input type="submit" name="" value="Entrar">
+                </form>
+              </div>
+            </aside>
+            <div class="clearfix"></div>
+          </section>
+        </section>
+        <!-- Pie De Pagina -->
+        <footer class="FOOTER" title="Curso Virtual De Javascript">
+          Master En Javascript &copy;
+          <a class="subir" title="Subir">Ir Arriba</a>
+        </footer>
+  </body>
+</html>
