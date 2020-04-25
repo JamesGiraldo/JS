@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      #caja{
+        width: 250px;
+        height: 250px;
+        border: solid 0.1px;
+        border-radius: 0px 0px 0px 0px;
+        background: blue;
+      }
+      .contenidoDIV{
+        color: #fff;
+      }
+      #datos{
+        border: solid 5px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 10px;
+        width: 250px;
+        height: 50px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        display: none;
+      }
+      #sigueme{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        display: block;
+        border: solid 2px;
+        background: yellow;        
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+      <div class="gray-bg container">
+        <h1 class="text-center">Eventos Ejercicios</h1>
+        <div class="" id="sigueme"></div>
+        <div class="">
+          <form class="" action="#" method="post">
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input type="text" id="nombre" placeholder="Nombre" name="nombre" value="">
+            </div>
+          </form>
+          <div id="datos">
+
+          </div>
+        </div>
+        <div class="" id="caja">
+          <p class="contenidoDIV" id="">Soy una caja</p>
+        </div>
+      </div>
+     <script type="text/javascript" src="js/eventos.js"></script>
+  </body>
+</html>

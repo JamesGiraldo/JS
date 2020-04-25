@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>INTERFACES</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/interface.js"></script>
+    <style>
+      .elemento{
+        width: 300px;
+        height: 200px;
+        border: 4px solid black;
+        background: lightblue;
+        margin: 20px;
+        float: left;
+      }
+      .lista-seleccionable li{
+        width: 80%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        listy-style: none;
+        cursor: pointer;
+      }
+      ul .ui-selecting { background:green;}
+      ul .ui-selected { background:blue;}
+      #elemento-movido{
+        width: 100px;
+        height: 100px;
+        border: 4px solid red;
+      }
+      #area{
+        width: 300px;
+        height: 300px;
+        border: 4px solid green;
+      }
+      .elemento{
+        background: pink;
+        float: none;
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="gray-bg container">
+      <h1 class="text-center">Interfaces JQuery UI</h1><hr>
+      <h3>Tooltip</h3>
+      <a href="#" title="Acceder a la seccion de mis datos">Mis Datos</a><hr>
+      <h3>Cuadros de Dialogos</h3>
+      <button type="button" class="btn btn-info" name="button" id="lanzar">Lanzar</button>
+      <div class="" id="popup" title="¿Estas Seguro?" style="display:none;">
+        <p>Si Contenias En el curso Aprendes js</p>
+      </div><hr>
+
+      <h3>CALENDARIO</h3>
+      <input type="text" id="calendario" name="" value=""><hr>
+
+      <h3>PANEL DE PESTAÑAS</h3>
+      <div class="" id="pestanas">
+        <ul>
+          <li><a href="#tabs-1">Pestaña 1</a></li>
+          <li><a href="#tabs-2">Pestaña 2</a></li>
+          <li><a href="#tabs-3">Pestaña 3</a></li>
+        </ul>
+        <div class="" id="tabs-1">
+          BRRR
+        </div>
+        <div class="" id="tabs-2">
+          Segunda
+        </div>
+        <div class="" id="tabs-3">
+          Tercera Carnal Esto es Genial :v
+        </div>
+      </div><hr>
+
+      <button type="button" id="mostrar" name="button" class="btn btn-success">Mostrar</button>
+      <div class="caja-efectos elemento" id=""></div>
+      <div id=area></div><br>
+      <div id=elemento-movido></div>
+      <ul class="lista-seleccionable">
+        <li>GTA 5</li>
+        <li>NEED FOR SPEED</li>
+        <li>CRASH BANDICOOT</li>
+        <li>Super Mariorio</li>
+      </ul>
+      <div class="elemento" id="elemento1">
+        Soy Un elemento del Primer Div
+      </div>
+      <div class="elemento" id="elemento2">
+        Soy Un elemento del Segundo Div
+      </div>
+      <div class="elemento" id="elemento3">
+        Soy Un elemento del Tercer Div
+      </div>
+    </div>
+  </body>
+</html>

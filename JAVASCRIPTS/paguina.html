@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Curso de Js</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="gray-bg container">
+        <h1 class="text-center">Añade tu pelicula</h1>
+        <form class="" action="" id="formpeliculas" method="">
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label for="nombre">Titulo:</label>
+              <input type="text" class="form-control" id="addpelicula" placeholder="Titulo">
+              <small id="error_pelicula" class="form-text text-muted"></small>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          </div>
+        </form>
+        <div class="" id="peliculas">
+          <h2>Peliculas</h2> <hr>
+          <ul id="peliculas-list">
+          </ul>
+        </div>
+        <form class="" action="" id="formborrarpeliculas" method="">
+          <div class="row">
+            <div class="form-group">
+              <label for="nombre">Titulo:</label>
+              <input type="text" class="form-control" id="borrarpelicula" placeholder="Titulo">
+              <small id="error_pelicula" class="form-text text-muted"></small>
+              <button type="submit" id="submit" class="btn btn-danger">Borrar</button>
+            </div>
+          </div>
+        </form>
+    </div>
+    <!-- <script type="text/javascript" src="js/json.js"></script> -->
+    <!-- <script type="text/javascript" src="js/local_storaje.js"></script> -->
+    <script type="text/javascript" src="js/ejercicio-LocalStorage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+*{
+  padding: 0;
+  border: 0;
+}
+.border-Form{
+  border: solid 0.1px;
+  /* the border will curve into a 'D' */
+  border-radius: 0px 0px 0px 0px;
+}
+.estapasios{
+  padding-bottom: 20px;
+}
+#error_nombre{
+  color: red !important;
+}
+#error_apellido{
+  color: red !important;
+}
+#error_edad{
+  color: red !important;
+}
+li{
+  list-style: none;
+}

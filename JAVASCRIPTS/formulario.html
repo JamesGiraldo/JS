@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejecicio DOM, Eventos y Funciones</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="gray-bg container">
+      <!-- un formulario con los campos nombres apellidos y edad
+           boton de enviar type submit
+           mostrar datos por pantalla, tener un boton que al dar click
+           muestre los datos actuales del formulario
+          validacion del formulario -->
+      <h1 class="text-center">Ejercicios DOM, Eventos y Funciones - Cursos Js BRRR Udemy.</h1>
+      <div class="container border-Form">
+        <h3 class="text">Formulario</h3><hr>
+        <div class="container ">
+          <form action="" method="post" id="formulario" onsubmit="return false;">
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="nombre">Nombres:</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombres">
+                  <small id="error_nombre" class="form-text text-muted"></small>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="apellido">Apellidos:</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="Apellidos">
+                  <small id="error_apellido" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="edad">Edad:</label>
+                  <input type="number" class="form-control" id="edad" min="1" placeholder="18+">
+                  <small id="error_edad" class="form-text text-muted"></small>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+              </div>
+          </form>
+        </div>
+      </div><hr>
+      <div class="container">
+        <div class="card bg-light mb-3" id="dashed" style="max-width: 18rem;">
+          <div class="card-header text-center" id="">Datos Informaticos</div>
+          <div class="card-body">
+            <p class="card-text" id="n_nombre">Nombre: <span></span> </p><hr>
+            <p class="card-text" id="p_apellidos">Apellidos: <span></span> </p><hr>
+            <p class="card-text" id="e_edad">Edad: <span></span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/ejercicios.js"></script>
+  </body>
+</html>

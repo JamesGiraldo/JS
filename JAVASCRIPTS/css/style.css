@@ -1,0 +1,14 @@
+*{
+  padding: 0;
+  border: 0;
+}
+.zebra{
+  border: solid 0.1px;
+  border-radius: 0px 0px 0px 0px;
+}
+.grande{
+  font-size: 30px;
+}
+li{
+  list-style: none;
+}
