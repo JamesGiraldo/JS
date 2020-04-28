@@ -1,7 +1,7 @@
 <h2>{{titulo}}</h2>
 <h4 for="">Añadir Marca</h4>
 <div class="form-group">
-  <input type="text" class="col-sm-2 col-form-label" [(ngModel)]="mi_marca" (keyup.enter)="mostrarPalabra()" />
+  <input type="text" class="col-form-label" [(ngModel)]="mi_marca" (keyup.enter)="mostrarPalabra()" />
   <button (click)="getMarca()" class="btn btn-outline-primary">Mostrar Marca</button>
   <button (click)="addMarca()" class="btn btn-outline-success">Agregar Marca</button>
   <small  [ngStyle]="{'color': 'blue'}" class="form-text text-muted">{{mi_marca}}</small>
@@ -47,12 +47,15 @@
         <td class="text-center" [ngStyle]="{
           'text-decoration': !deportiva.stock ? 'line-through' : 'none'}">{{deportiva.nombre}}</td>
         <td class="text-center" [ngStyle]="{
-          'text-decoration': !deportiva.stock ? 'line-through' : 'none'}">${{deportiva.precio}}</td>
+          'text-decoration': !deportiva.stock ? 'line-through' : 'none'}"
+          [class.altoPrecio]="deportiva.precio >= 80"
+          [ngClass]="{'fondoRojo': deportiva.precio > 100,
+          'subra': deportiva.marca == 'Nike'}">${{deportiva.precio}}</td>
         <td class="text-center">
           <span *ngIf="deportiva.precio < 80"
                 [style.background]="deportiva.precio < 80 ? 'green' : 'transparent'"
-                [style.color]="deportiva.precio < 80 ? 'white' : 'black' ">
-                !EN OFERTA¡ </span>
+                [style.color]="deportiva.precio < 80 ? 'white' : 'black'"
+                >!EN OFERTA¡</span>
         </td>
       </tr>
     </tbody>
@@ -69,7 +72,7 @@
   </li>
 </ul> -->
 <h4>El Color De La Mayoria De Nuestras Zapatillas es: </h4>
-<input type="text" class="col-sm-2 col-form-label" [(ngModel)]="color" />
+<input type="text" class="col-form-label" [(ngModel)]="color" />
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'yellow'">
     Las Mas Solicitada Son De Color <span [ngStyle]="{'background': color}">Amarillo</span>
