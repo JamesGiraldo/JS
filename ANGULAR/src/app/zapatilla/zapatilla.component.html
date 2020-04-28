@@ -1,0 +1,86 @@
+<h2>{{titulo}}</h2>
+<h4 for="">Añadir Marca</h4>
+<div class="form-group">
+  <input type="text" class="col-sm-2 col-form-label" [(ngModel)]="mi_marca" (keyup.enter)="mostrarPalabra()" />
+  <button (click)="getMarca()" class="btn btn-outline-primary">Mostrar Marca</button>
+  <button (click)="addMarca()" class="btn btn-outline-success">Agregar Marca</button>
+  <small  [ngStyle]="{'color': 'blue'}" class="form-text text-muted">{{mi_marca}}</small>
+</div><hr>
+<h4>Compra las zapatillas de las mejores marcas</h4>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover dataTables-example">
+    <thead>
+      <tr>
+        <th class="text-center">INDICE</th>
+        <th class="text-center">NOMBRE</th>
+        <th class="text-center">OPCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let marca of marcas; let indice = index">
+        <td class="text-center">{{indice}}</td>
+        <td class="text-center">{{marca}}</td>
+        <td class="text-center">
+          <button type="button" class="btn btn-outline-danger" (click)="deleteMarca(indice)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div><hr>
+<!-- <ul>
+  <li *ngFor="let marca of marcas; let indice = index">{{indice + ' - ' + marca}}
+    <button type="button" class="btn-danger" (click)="deleteMarca(indice)">Borrar</button>
+  </li>
+</ul> -->
+<h4>Las deportivas que tenemos disponibles son:</h4>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover dataTables-example">
+    <thead>
+      <tr>
+        <th class="text-center">NOMBRE</th>
+        <th class="text-center">PRECIO</th>
+        <th class="text-center">ESTADO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let deportiva of zapatillas">
+        <td class="text-center" [ngStyle]="{
+          'text-decoration': !deportiva.stock ? 'line-through' : 'none'}">{{deportiva.nombre}}</td>
+        <td class="text-center" [ngStyle]="{
+          'text-decoration': !deportiva.stock ? 'line-through' : 'none'}">${{deportiva.precio}}</td>
+        <td class="text-center">
+          <span *ngIf="deportiva.precio < 80"
+                [style.background]="deportiva.precio < 80 ? 'green' : 'transparent'"
+                [style.color]="deportiva.precio < 80 ? 'white' : 'black' ">
+                !EN OFERTA¡ </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div><hr>
+<!-- <ul>
+  <li *ngFor="let deportiva of zapatillas">
+    <span [ngStyle]="{
+      'text-decoration': !deportiva.stock ? 'line-through' : 'none'}">
+      {{deportiva.nombre}} - <strong>{{deportiva.precio}}$ </strong></span>
+      <span *ngIf="deportiva.precio < 80"
+            [style.background]="deportiva.precio < 80 ? 'green' : 'transparent'"
+            [style.color]="deportiva.precio < 80 ? 'white' : 'black' "> !EN OFERTA¡ </span>
+  </li>
+</ul> -->
+<h4>El Color De La Mayoria De Nuestras Zapatillas es: </h4>
+<input type="text" class="col-sm-2 col-form-label" [(ngModel)]="color" />
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'yellow'">
+    Las Mas Solicitada Son De Color <span [ngStyle]="{'background': color}">Amarillo</span>
+  </li>
+  <li *ngSwitchCase="'red'">
+    Las Mas Solicitada Son De Color <span [ngStyle]="{'background': color}">Rojo</span>
+  </li>
+  <li *ngSwitchCase="'blue'">
+    Las Mas Solicitada Son De Color <span [ngStyle]="{'background': color}">azul</span>
+  </li>
+  <li *ngSwitchCase="'orange'">
+    Las Mas Solicitada Son De Color <span [ngStyle]="{'background': color}">Naranga</span>
+  </li>
+</ul>
