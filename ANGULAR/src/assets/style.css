@@ -11,6 +11,25 @@
 .activado{
   background: #1b9bff;
 }
+.fechaExterna{
+  float: left;
+  margin-right: 20px;
+  font-size: 14px;
+  padding: 0;
+  background: #1b9bff;
+  position: relative;
+  top: -60px;
+  color: white;
+  border-radius: 3px;
+  position: static;
+  line-height: 26px;
+  padding: 7px;
+  width: auto;
+  line-break: auto;
+}
+.validacionSPAN{
+  color: red;
+}
 /* nav en el header */
 *{
   padding: 0;
@@ -74,10 +93,21 @@ label.logo{
   .navegacion_header .UL .LI a{
     font-size: 16px;
   }
+  .fechaExterna{
+    width: 14%;
+    position: fixed;
+    float: left;
+    top: 88px;
+    position: absolute;
+  }
 }
 @media (max-width: 852px){
   .checkbtn{
     display: block;
+  }
+  .fechaExterna{
+    width: 24%;
+    position: absolute;
   }
   .UL{
     position: fixed;

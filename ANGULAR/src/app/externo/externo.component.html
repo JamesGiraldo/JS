@@ -1,0 +1,54 @@
+<div class="fechaExterna">
+  {{fecha | date:'fullDate' | uppercase}}
+  <!-- {{'HOLA BRRR ' | lowercase}} -->
+</div>
+<h1 class="text-center">Componente externo</h1><hr>
+<div class="">
+  {{ 4 | calculadora: 2 }}
+</div>
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargarUsuario()" />
+<div class="" *ngIf="!user">
+  Cargando...
+</div>
+<div class="" *ngIf="user">
+  <img src="{{user.avatar}}" width="200px">
+  <h3>{{user.first_name + ' ' + user.last_name}}</h3>
+</div><hr>
+
+<h3 class="">Crear Uusario</h3>
+<div class="">
+  <form class="" action="#" method="post" #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Nombres</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" class="form-control" required>
+        <span *ngIf="name.touched && !name.valid" class="validacionSPAN">El Name Es Obligatorio</span>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="job">Trabajo</label>
+        <input type="text" name="job" class="form-control" #job="ngModel" [(ngModel)]="new_user.job" required>
+        <span *ngIf="job.touched && !job.valid" class="validacionSPAN">El Job Es Obligatorio</span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!newUser.form.valid">Enviar</button>
+  </form>
+</div>
+<div class="" *ngIf="usuario_guardado">
+  <h2>El Usuario se Ha Guardado Correctamente</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover dataTables-example">
+      <thead>
+        <tr>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Trabajo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center">{{usuario_guardado.name}}</td>
+          <td class="text-center">{{usuario_guardado.job}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<h1 class="text-center">component contactos</h1><hr>
+
+<div class="">
+  <form class="" action="#" method="post" #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nombre">Nombres</label>
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" class="form-control" required>
+        <span *ngIf="nombre.touched && !nombre.valid" class="validacionSPAN">El Nombre Es Obligatorio</span>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="apellido">Apellidos</label>
+        <input type="text" name="apellido" class="form-control" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" required>
+        <span *ngIf="apellidos.touched && !apellidos.valid" class="validacionSPAN">El Apellidos Es Obligatorio</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="usuario.email" required>
+        <span *ngIf="email.touched && !email.valid" class="validacionSPAN">El Email Es Obligatorio</span>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="mensaje">Mensaje</label>
+        <textarea class="form-control" name="mensaje" #mensaje="ngModel" [(ngModel)]="usuario.mensaje" rows="3" required></textarea>
+        <span *ngIf="mensaje.touched && !mensaje.valid" class="validacionSPAN">El Mensaje Es Obligatorio</span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!formContacto.form.valid">Enviar</button>
+  </form>
+</div>

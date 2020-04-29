@@ -4,9 +4,11 @@
   <label class="logo">{{title}}</label>
   <ul class="UL">
     <li class="LI"><a class="active" [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a></li>
+    <li class="LI"><a class="" [routerLink]="['/contacto']" [routerLinkActive]="['activado']">Contactos</a></li>    
     <li class="LI"><a class="" [routerLink]="['/zapatillas']" [routerLinkActive]="['activado']">Zapatillas</a></li>
     <li class="LI"><a class="" [routerLink]="['/videojuegos']" [routerLinkActive]="['activado']">Video juegos</a></li>
     <li class="LI"><a class="" [routerLink]="['/cursos']" [routerLinkActive]="['activado']">Cursos</a></li>
+    <li class="LI"><a class="" [routerLink]="['/externo']" [routerLinkActive]="['activado']">Externo</a></li>
   </ul>
 </nav>
 <!-- Toolbar -->
@@ -16,11 +18,5 @@
   </svg>
 </div>
 <div class="container">
-  <!-- <router-outlet></router-outlet>
-  <button type="button" (click)="ocultarVidejuegos(false)" *ngIf="mostrar_videjuegos" name="button">Ocultar</button>
-  <button type="button" (click)="ocultarVidejuegos(true)" *ngIf="!mostrar_videjuegos" name="button">Mostrar</button>
-  <videojuego *ngIf="mostrar_videjuegos"></videojuego><hr> -->
-  <!-- <zapatilla></zapatilla><hr>
-  <curso></curso> -->
   <router-outlet></router-outlet>
 </div>
