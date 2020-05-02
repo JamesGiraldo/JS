@@ -3,7 +3,7 @@
   <div  *ngFor="let project of projects"  class="card project">
     <a [routerLink]="['/proyecto',project._id]" title="Ver Informacion Del Proyecto">
 			<div class="image">
-      	<img src="{{url+'get-image/'+project.image}}" *ngIf="project.image" alt="Imagen Del Articulo">
+      	<img src="{{url+'get-image/'+project.image}}" alt="Imagen Del Proyecto">
 			</div>
       <div class="card-body">
         <h3 class="card-title">{{project.name}}</h3>

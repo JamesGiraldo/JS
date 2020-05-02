@@ -97,7 +97,7 @@ var controller = {
           return res.sendFile(path.resolve(path_file));
         }else{
           return res.status(200).send({
-            message: "no Existe La Imagen..."
+            message: "No Existe La Imagen..."
           });
         }
       });

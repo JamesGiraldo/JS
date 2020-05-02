@@ -28,7 +28,7 @@ export class CreateComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	onSubmit(form){
+  onSubmit(form){
 		// Guardar datos básicos
 		this._projectService.saveProject(this.project).subscribe(
 			response => {
@@ -37,9 +37,7 @@ export class CreateComponent implements OnInit {
 					if(this.filesToUpload){
 						this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image')
 						.then((result:any) => {
-
 							this.save_project = result.project;
-
 							this.status = 'success';
 							form.reset();
 						});
@@ -47,7 +45,7 @@ export class CreateComponent implements OnInit {
 						this.save_project = response.project;
 						this.status = 'success';
 						form.reset();
-					}
+					}					
 				}else{
 					this.status = 'failed';
 				}
@@ -57,9 +55,7 @@ export class CreateComponent implements OnInit {
 			}
 		);
 	}
-
-	fileChangeEvent(fileInput: any){
+  fileChangeEvent(fileInput: any){
 		this.filesToUpload = <Array<File>>fileInput.target.files;
 	}
-
 }
