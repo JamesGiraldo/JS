@@ -27,7 +27,10 @@
            <span *ngIf="langs.touched && !langs.valid" class="validacionSPAN">El Lenguaje Es Obligatorio</span>
          </div>
          <div class="form-group col-md-4">
-           <label for="image">Imagen Del Proyecto</label>           
+           <label for="image">Imagen Del Proyecto</label>
+           <div class="image" *ngIf="project.image">
+             <img src="{{url+'get-image/'+project.image}}" alt="Imagen Del Proyecto" width="100">
+           </div>
            <input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)"class="form-control-file"/>
          </div>
          <div class="form-group col-md-2">
