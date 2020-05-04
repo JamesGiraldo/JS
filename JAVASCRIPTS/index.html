@@ -5,15 +5,54 @@
     <title>JAVASCRIPTS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script type="text/javascript" src="js/Js.js"></script>
          <script type="text/javascript" src="js/funciones.js"></script>
          <script type="text/javascript" src="js/funciones-texto.js"></script>
          <script type="text/javascript" src="js/plantillas.js"></script>
          <script type="text/javascript" src="js/array.js"></script>
     -->
+    <style>
+      .ventana{
+        background: rgba(0,0,102,1);
+        width: 30%;
+        color: rgba(255,255,255,1);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        text-align: center;
+        padding: 33px;
+        min-height: 250px;
+        border-radius: 22px;
+        position: absolute;
+        left: 34%;
+        top: 25%;
+        display: none;
+      }
+      #cerrar{
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        color: white;
+      }
+      #cerra a{
+        text-decoration: none;
+        color: white;
+      }
+      .ventana a{
+        color: white;
+      }
+    </style>
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
-    <div class="gray-bg">
+    <div class="gray-bg container">
+      <div class="ventana" id="vent">
+        <div id="cerrar">
+         <a href="javascript:cerrar()"><i class="fa fa-xing"></i></a>
+        </div>
+        Brrr Bienvenido
+      </div>
+      <a href="javascript:abrir()" class="btn btn-info">Abrir Ventana POPUP</a>
+
       <h1 class="text-center" id="titulo">Curso De JAVASCRIPTS</h1>
       <button type="submit" id="star" class="btn btn-success">START</button>
       <p>
@@ -47,5 +86,13 @@
       <script type="text/javascript" src="js/BOM.js"></script>
       <script type="text/javascript" src="js/eventos.js"></script>  -->
       <script type="text/javascript" src="js/ejercicios.js"></script>
+      <script>
+        function abrir(){
+          document.getElementById("vent").style.display = "block";
+        }
+        function cerrar(){
+          document.getElementById("vent").style.display = "none";
+        }
+      </script>
   </body>
 </html>

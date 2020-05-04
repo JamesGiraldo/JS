@@ -1,5 +1,10 @@
 <div class="container">
     <h1 class="text-center">Contacto</h1>
+  <div id="texto" #textos>
+    <span appResaltado class="testoESPAN">
+      Esta es la pagina de contacto, puedes enviarnos cualquier cosa
+    </span>
+  </div>
   <div class="">
     <div class="row">
      <div class="col">
@@ -11,7 +16,10 @@
      </div>
    </div>
     <div class="" *ngIf="anchuraToSlider">
-      <slider [anchura]="widthSlider" [etiquetas]="captions"></slider>
+      <slider [anchura]="widthSlider" [etiquetas]="captions" (conseguirAutor)="getAutor($event)"></slider>
+    </div>
+    <div class="">
+      <span>{{autor.nombre + " " +autor.website}}</span>
     </div>
   </div>
 </div>

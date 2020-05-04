@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 declare var $: any;
 
 @Component({
@@ -9,7 +9,16 @@ declare var $: any;
 export class SliderComponent implements OnInit {
   @Input() anchura: number;
   @Input('etiquetas') captions: boolean;
-  constructor(){ }
+  public autor: any;
+  @Output() conseguirAutor = new EventEmitter();
+
+  constructor(){
+    this.autor = {
+      nombre: "James Giraldo",
+      website: "Jamesgiiraldo@gmail.com",
+      youtube: "James Giraldo"
+    }
+  }
 
   ngOnInit(){
     $("#logo").click(function(e){
@@ -26,5 +35,7 @@ export class SliderComponent implements OnInit {
        pager: false
      });
   }
-
+  lanzar(event){    
+    this.conseguirAutor.emit(this.autor);
+  }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-declare var $: any;
+import { Component, OnInit, ViewChild } from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-contact',
@@ -8,21 +8,31 @@ declare var $: any;
 })
 export class ContactComponent implements OnInit {
   public widthSlider: number;
-  public anchuraToSlider: number;
+  public anchuraToSlider: any;
   public captions: boolean;
-  constructor(){
-    this.captions = true;
+  public autor: any;
+  @ViewChild('textos', {static: true}) textos;
+  // @ViewChild('textos') textos;
+
+  constructor() {
+  	this.captions = true;
+   }
+
+  ngOnInit() {
+    var opcion_clasica = document.querySelector('#texto').innerHTML;
+    //alert(this.textos.nativeElement.textContent);
   }
 
-  ngOnInit(){
-
-  }
   cargarSlider(){
-    // this.anchuraToSlider = null;
-      this.anchuraToSlider = this.widthSlider;
+  	this.anchuraToSlider = this.widthSlider;
   }
+
   resetearSlider(){
-    this.anchuraToSlider = false;
+  	this.anchuraToSlider = false;
+  }
+
+  getAutor(event){
+    this.autor = event;
   }
 
 }
