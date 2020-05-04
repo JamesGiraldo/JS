@@ -1,1 +1,17 @@
-<p>contact works!</p>
+<div class="container">
+    <h1 class="text-center">Contacto</h1>
+  <div class="">
+    <div class="row">
+     <div class="col">
+       <input type="number" class="form-control" min="300" placeholder="Tamano del Slider" [(ngModel)]="widthSlider">
+     </div>
+     <div class="col">
+       <button (click)="cargarSlider()"  class="btn btn-outline-info">Cargar Slider</button>&nbsp;
+       <button (click)="resetearSlider()"  class="btn btn-outline-dark">Resetear Slider</button>
+     </div>
+   </div>
+    <div class="" *ngIf="anchuraToSlider">
+      <slider [anchura]="widthSlider" [etiquetas]="captions"></slider>
+    </div>
+  </div>
+</div>
