@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs'; otra manera de la libreria al usar 
 import { Project } from '../models/project';
 import { Global } from './global';
 
