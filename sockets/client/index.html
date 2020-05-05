@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat Con Socket.io Y NodeJS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    <style>
+      #messages{
+        width: 95%;
+        max-width: 400px;
+        height: 350px;
+        overflow-y: scroll;
+        border: 1px solid #eee;
+        box-shadow: 0px 0px 20px #ccc inset;
+      }
+      .messag{
+        margin: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center">Chat Con Socket.io Y NodeJS</h1>
+        <div id="messages"></div>
+        <div class="">
+          <form class="" onsubmit="return addMessage(this);">
+            <div class="form-group">
+              <label for="nick">Nick</label>
+              <input type="text" class="form-control"  id="nickname" placeholder="Nick">
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea class="form-control" id="text" placeholder="Mensaje.." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+          </form>
+        </div>
+    </div>
+  </body>
+</html>
