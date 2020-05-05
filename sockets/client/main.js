@@ -7,8 +7,8 @@ socket.on('messages', function(data){
 
 function render(data){
   var html = data.map(function(message, index){
-      return (`
-          <div class"messag">
+      return (`          
+          <div class="messag">
               <strong>${message.nickname}</strong>
               <p>${message.text}</p>
           </div>
