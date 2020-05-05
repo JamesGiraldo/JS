@@ -71,7 +71,7 @@ var controller = {
         var extSplit = fileName.split('\.');
         var fileExt = extSplit[1];
         if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
-          Project.findOneAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated) => {
+          Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated) => {
             if (err) return res.status(500).send({message: 'La Imagen No Se Guardo'});
             if (!projectUpdated) return res.status(404).send({message: 'Imagen No Existe'});
             return res.status(200).send({
