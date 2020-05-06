@@ -1,4 +1,4 @@
-var socket = io.connect('http://172.20.10.2:6677',{'forceNew':true});
+var socket = io.connect('http://192.168.0.39:6677',{'forceNew':true});
 
 socket.on('messages', function(data){
   console.log(data);
@@ -7,10 +7,10 @@ socket.on('messages', function(data){
 
 function render(data){
   var html = data.map(function(message, index){
-      return (`          
+      return (`
           <div class="messag">
-              <strong>${message.nickname}</strong>
-              <p>${message.text}</p>
+              <strong class="nombre">${message.nickname}</strong>
+              <p class="mens">${message.text}</p>
           </div>
       `);
   }).join(' ');

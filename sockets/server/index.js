@@ -12,7 +12,7 @@ app.get('/hola-mundo', function(req, res){
 var messages = [{
   id: 1,
   text: "Bienvenido Al Chat Privado de Socket.io Y Node Js De James Giraldo...",
-  nickname: "Bot - Jamesgiiraldo@gmail.com"
+  nickname: "Jamesgiiraldo@gmail.com"
 }];
 
 io.on('connection', function(socket){
